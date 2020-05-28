@@ -3,7 +3,7 @@ The Initiative in Ethics and Transformative Technologies convenes productive dis
 [Seattle University Initiative in Ethics and Transformative Technologies](https://www.seattleu.edu/ethics-and-technology/ "Seattle University Initiative in Ethics and Transformative Technologies")
 
 ## Annotated Bibliography
-[Recent Ethics and Technology content in the news](https://www.seattleu.edu/ethics-and-technology/educational-resources/annotated-bibliography/ "Seattle University Initiative in Ethics and Transformative Technologies")
+[Recent Ethics and Technology content in the news](https://www.seattleu.edu/ethics-and-technology/educational-resources/annotated-bibliography/ "Seattle University Initiative in Ethics and Transformative Technologies") This page is an live in-progress bibliography created by students in the MBA program.
 
 ### Bibliography Filter/Search Application
 This application seeks to provide the managers of the annotated bibliography with a formatted content type they can use to capture the content of articles produced by their bibliography and an application to filter and search for specific content or topics in those articles
