@@ -17,19 +17,25 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 1.2
+*     @version 1.5
 */
 
 try {
   /* -- Store all the things -- */
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
-  var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
+
+  // var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
+    // var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
+  // var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
+
+  var articleTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var lastModified = '<div class="lastModified" style="display:inline-block">Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></div>';
-  var fieldKeywords = content.get("Searchable Keyword");
-  var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
+  var keyWords = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Searchable Keyword' output='normal' display_field='value' />");
+
+  // var keyWords = content.get("Searchable Keyword");
   var listOfTags = "";
-  var listOfTypes = "";
+  // var listOfTypes = "";
 
 
   /* -- Prepare all the things -- */
@@ -38,8 +44,8 @@ try {
 
 
   /* parse the list of tags, add <li> tags*/
-  if (fieldTags != "") {
-    var arrayOfTags = fieldTags.split(',');
+  if (articleTags != "") {
+    var arrayOfTags = articleTags.split(',');
     for (let i = 0; i < arrayOfTags.length; i++) {
       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
     }
@@ -47,13 +53,13 @@ try {
   }
 
     /* parse the list of categories, add <li> tags*/
-  if (articleTypes != "") {
-    var arrayOfTypes = articleTypes.split(',');
-    for (let i = 0; i < arrayOfTypes.length; i++) {
-      listOfTypes += '<li class="articleType">' + arrayOfTypes[i] + '</li>';
-    }
-    listOfTypes = '<ul>' + listOfTypes + '</ul>';
-  }
+  // if (articleTypes != "") {
+  //   var arrayOfTypes = articleTypes.split(',');
+  //   for (let i = 0; i < arrayOfTypes.length; i++) {
+  //     listOfTypes += '<li class="articleType">' + arrayOfTypes[i] + '</li>';
+  //   }
+  //   listOfTypes = '<ul>' + listOfTypes + '</ul>';
+  // }
 
   
 
@@ -77,7 +83,7 @@ try {
   }
 
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
-  document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
+  document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + keyWords + '</div>');
   document.write('</div>'); // close summaryWrapper
 
   document.write(endingHTML);
