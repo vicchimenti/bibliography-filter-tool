@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 1.5
+*     @version 1.6
 */
 
 try {
@@ -49,7 +49,7 @@ try {
     for (let i = 0; i < arrayOfTags.length; i++) {
       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
     }
-    listOfTags = '<ul>' + listOfTags + '</ul>';
+    listOfTags = '<ul class="tags">' + listOfTags + '</ul>';
   }
 
     /* parse the list of categories, add <li> tags*/
@@ -74,13 +74,13 @@ try {
 
 
   /* -- Write Program Level 1 Details --*/
-  if (listOfTypes != "") {
-    document.write('<div class="levelOne">');
-    document.write('<div class="articleDetails articleTypes"><h5>Categories: </h5><div class="articleTypes"><span>' + listOfTypes + '</span></div></div>');
-    document.write('</div>');
-  } else {
-    document.write('<div class="levelOne articleDetails articleType" style="display: none";><h5>No Category Provided</h5></div>');
-  }
+  // if (listOfTypes != "") {
+  //   document.write('<div class="levelOne">');
+  //   document.write('<div class="articleDetails articleTypes"><h5>Categories: </h5><div class="articleTypes"><span>' + listOfTypes + '</span></div></div>');
+  //   document.write('</div>');
+  // } else {
+  //   document.write('<div class="levelOne articleDetails articleType" style="display: none";><h5>No Category Provided</h5></div>');
+  // }
 
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + keyWords + '</div>');
