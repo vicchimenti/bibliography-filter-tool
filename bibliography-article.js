@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.14
+*     @version 2.15
 */
 
 try {
@@ -57,7 +57,7 @@ try {
 
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="knowledgeBaseItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="knowledgeBaseItem standardContent">';
-  var published = '<div class="publicationDate" style="display:inline-block">Publication Date: ' + dateOnly + '</div>';
+  var published = '<div class="publicationDate" style="display:inline-block">' + dateOnly + '</div>';
   var endingHTML = '</div></div>';
 
 
@@ -68,8 +68,8 @@ try {
   document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" aria-label="' + articleTitle + '" aria-describedby="publisherInfo" title="' + publisher + '" target="_blank" >' + articleTitle + '</a></h4></div>');
   document.write('<div class="summary">' + articleSummary + '</div>');
   document.write(listOfTags);
-  document.write('<div class="publisher" id="publisherInfo" role="tooltip">Publisher: ' + publisher + '</div>');
-  document.write('<div class="author">Author: ' + author + '</div>');
+  document.write('<div class="publisher" id="publisherInfo" role="tooltip">' + publisher + '</div>');
+  document.write('<div class="author">' + author + '</div>');
   document.write(published);
 
 
