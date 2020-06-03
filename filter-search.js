@@ -7,10 +7,10 @@
 *   This URI will change after launch to to suit the host department
 *
 *   jQuery
-*   This script searches the special-topics courses content items for matches to the
+*   This script searches the Bibliography content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 1.0
+*   @version 1.1
 */
 
 
@@ -84,7 +84,7 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('.articleType').filter(function (i, e) {
+                        $('.tag').filter(function (i, e) {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
