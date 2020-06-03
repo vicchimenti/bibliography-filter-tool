@@ -10,7 +10,7 @@
 *   This script searches the Bibliography content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 1.1
+*   @version 1.2
 */
 
 
