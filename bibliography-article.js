@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.9
+*     @version 2.10
 */
 
 try {
@@ -66,6 +66,7 @@ try {
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
+  document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" aria-label="' + articleTitle + '" >Title Anchor Link: ' + articleTitle + '</a></h4></div>');
   document.write('<div class="title">Title: ' + articleTitle + '</div>');
   document.write('<div class="titleLink">Link: ' + externalArticleLink + '</div>');
   document.write('<div class="summary">Summary: ' + articleSummary + '</div>');
