@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.17
+*     @version 2.18
 */
 
 try {
@@ -48,7 +48,7 @@ try {
   if (articleTags != '') {
     var arrayOfTags = articleTags.split(',');
     for (let i = 0; i < arrayOfTags.length; i++) {
-      listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
+      listOfTags += '<li>' + arrayOfTags[i] + '</li>';
     }
     listOfTags = '<ul class="tags">' + listOfTags + '</ul>';
   }
@@ -68,7 +68,7 @@ try {
   document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" title="' + publisher + ': ' + articleTitle + '" target="_blank" >' + articleTitle + '</a></h4></div>');
   document.write('<div class="summary">' + articleSummary + '</div>');
   document.write(listOfTags);
-  document.write('<div class="publisher" id="publisherInfo" role="tooltip">' + publisher + '</div>');
+  document.write('<div class="publisher">' + publisher + '</div>');
   document.write('<div class="author">' + author + '</div>');
   document.write(published);
 
