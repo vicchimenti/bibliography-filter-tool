@@ -66,11 +66,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
   document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" aria-label="' + articleTitle + '" aria-describedby="publisherInfo" title="' + publisher + '" target="_blank" >Title Anchor Link: ' + articleTitle + '</a></h4></div>');
-//   <a href="#" aria-describedby="extrainfo">[Link text]</a> title="' + publisher + '"
-// <div role="tooltip" id="extrainfo">[Content of the tooltip]</div>
-//   document.write('<div class="title" id="publisherInfo">Title: ' + articleTitle + '</div>');
-  // document.write('<div class="titleLink">Link: ' + externalArticleLink + '</div>');
-  document.write('<div class="summary">Summary: ' + articleSummary + '</div>');
+  document.write('<div class="summary">' + articleSummary + '</div>');
   document.write(listOfTags);
   document.write('<div class="publisher" id="publisherInfo" role="tooltip">Publisher: ' + publisher + '</div>');
   document.write('<div class="author">Author: ' + author + '</div>');
