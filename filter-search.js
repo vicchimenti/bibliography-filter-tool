@@ -85,10 +85,11 @@ $(function () {
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
                         $('.tags').filter(function (i, e) {
-                            var typeValue = $(this).text();
+                            let typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
-                            if (typeValue.match(typeKey)) {
-                                $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                            if (typeValue.match(typeKey) && typeValue === typeKey) {
+                                    $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                            // if (typeValue.startsWith(typeKey)) {
                             } else {
                                 $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
                             }
