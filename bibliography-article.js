@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.10
+*     @version 2.11
 */
 
 try {
@@ -30,7 +30,6 @@ try {
   var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
   var publicationDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publication Date' output='normal' display_field='value' />");
   var keyWords = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Searchable Keyword' output='normal' display_field='value' />");
-  // var lastModified = '<div class="lastModified" style="display:inline-block">Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></div>';
   var listOfTags = '';
   var dateOnly = '';
 
@@ -74,7 +73,6 @@ try {
   document.write('<div class="publisher">Publisher: ' + publisher + '</div>');
   document.write('<div class="author">Author: ' + author + '</div>');
   document.write(published);
-  // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
 
 
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + keyWords + '</div>');
