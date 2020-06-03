@@ -17,12 +17,13 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.8
+*     @version 2.9
 */
 
 try {
   /* -- Store all the things -- */
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
+  var externalArticleLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Article Link' output='normal' display_field='value' />");
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var articleTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
   var publisher = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publication' output='normal' display_field='value' />");
@@ -66,6 +67,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
   document.write('<div class="title">Title: ' + articleTitle + '</div>');
+  document.write('<div class="titleLink">Link: ' + externalArticleLink + '</div>');
   document.write('<div class="summary">Summary: ' + articleSummary + '</div>');
   document.write(listOfTags);
   document.write('<div class="publisher">Publisher: ' + publisher + '</div>');
