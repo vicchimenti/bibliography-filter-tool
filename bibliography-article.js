@@ -48,7 +48,7 @@ try {
   if (articleTags != '') {
     var arrayOfTags = articleTags.split(',');
     for (let i = 0; i < arrayOfTags.length; i++) {
-      listOfTags += '<li>' + arrayOfTags[i] + '</li>';
+      listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
     }
     listOfTags = '<ul class="tags">' + listOfTags + '</ul>';
   }
