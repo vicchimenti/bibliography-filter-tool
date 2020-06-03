@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.6
+*     @version 2.8
 */
 
 try {
@@ -66,12 +66,12 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
   document.write('<div class="title">Title: ' + articleTitle + '</div>');
-  document.write('<div class="publisher">Publisher: ' + publisher + '</div>');
-  document.write('<div class="author">Author: ' + author + '</div>');
   document.write('<div class="summary">Summary: ' + articleSummary + '</div>');
   document.write(listOfTags);
-  // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
+  document.write('<div class="publisher">Publisher: ' + publisher + '</div>');
+  document.write('<div class="author">Author: ' + author + '</div>');
   document.write(published);
+  // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
 
 
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + keyWords + '</div>');
