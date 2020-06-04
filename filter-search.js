@@ -107,9 +107,10 @@ $(function () {
                 $('#SelectBox-ByType').change(function () {
                     let typeKey = $(this).val();
                     if (typeKey) {
-                        $('ul.tags').each(function (i, e) {
+                        $('ul.tags').each(function (i,e) {
                             let typeValue = $(this).text();
                             if (typeKey.match(typeValue)) {
+                            // if (typeValue == typeKey) {
                                 $(this)
                                     .parents('.knowledgeBaseItemWrapper')
                                     .removeClass('hideByType');
