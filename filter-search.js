@@ -77,34 +77,6 @@ $(function () {
 						
 
             //   ***   Type Filter   ***   //
-            // $(function() {
-            //     $('#SelectBox-ByType').on('change', function() {
-            //         let typeKey = $(this).val();
-            //         if (typeKey) {
-            //             $('.tags').filter(function(index) {
-            //                 return $(this).text() === typeKey;
-            //             }).each(index, element) {
-            //                 $(this).parents('.knowledgeBaseItemWrapper').toggleClass('hideByType',true);
-            //             }
-            //             parseItems.process();
-            //         }
-            //     });
-            // });
-
-            // $(function() {
-            //     $('#SelectBox-ByType').change(function() {
-            //         let typeKey = $(this).val();
-            //         if (typeKey) {
-            //           $('ul.tags').filter(function(index) {
-            //               return $(this).text()=== typeKey;
-            //             })
-            //             .parents('.knowledgeBaseItemWrapper')
-            //             .toggleClass('hideByType');
-            //         }
-            //         parseItems.process();
-            //     });
-            //   });
-
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#SelectBox-ByType').change(function () {
@@ -133,6 +105,8 @@ $(function () {
                 });
             });
 
+
+            
 
         }, 10);
     });
