@@ -109,7 +109,7 @@ $(function () {
                     if (typeKey) {
                         $('ul.tags').each(function (i,e) {
                             let typeValue = $(this).text();
-                            if (typeKey.match(typeValue)) {
+                            if (typeValue.match(typeKey)) {
                             // if (typeValue == typeKey) {
                                 $(this)
                                     .parents('.knowledgeBaseItemWrapper')
