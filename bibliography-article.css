@@ -20,6 +20,14 @@
     text-decoration: none;
 }
 
+div.author {
+    font-style: italic;
+}
+
+div.publisher {
+    font-weight: 600;
+}
+
 figure.programImageWrapper {
     border: 1px solid #999;
     /* display: inline-block; */

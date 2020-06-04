@@ -77,6 +77,34 @@ $(function () {
 						
 
             //   ***   Type Filter   ***   //
+            // $(function() {
+            //     $('#SelectBox-ByType').on('change', function() {
+            //         let typeKey = $(this).val();
+            //         if (typeKey) {
+            //             $('.tags').filter(function(index) {
+            //                 return $(this).text() === typeKey;
+            //             }).each(index, element) {
+            //                 $(this).parents('.knowledgeBaseItemWrapper').toggleClass('hideByType',true);
+            //             }
+            //             parseItems.process();
+            //         }
+            //     });
+            // });
+
+            // $(function() {
+            //     $('#SelectBox-ByType').change(function() {
+            //         let typeKey = $(this).val();
+            //         if (typeKey) {
+            //           $('ul.tags').filter(function(index) {
+            //               return $(this).text()=== typeKey;
+            //             })
+            //             .parents('.knowledgeBaseItemWrapper')
+            //             .toggleClass('hideByType');
+            //         }
+            //         parseItems.process();
+            //     });
+            //   });
+
             $(function () {
                 // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#SelectBox-ByType').change(function () {
@@ -84,10 +112,12 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('.tags').filter(function (i, e) {
+                        $('ul.tags li').each(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
-                            if (typeValue.match(typeKey) && typeValue === typeKey) {
+                            // if (typeValue.match(typeKey) && typeValue === typeKey) {
+
+                            if (typeValue == typeKey) {
                                     $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
                             // if (typeValue.startsWith(typeKey)) {
                             } else {
@@ -102,6 +132,8 @@ $(function () {
                     parseItems.process();
                 });
             });
+
+
         }, 10);
     });
 });
