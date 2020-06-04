@@ -112,14 +112,14 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('ul.tags li').each(function (i, e) {
+                        $('ul.tags').each(function (i, e) {
                             let typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
-                            // if (typeValue.match(typeKey) && typeValue === typeKey) {
-
-                            if (typeValue == typeKey) {
+                            if (typeValue.match(typeKey)) {
+                                // if (typeValue == typeKey) {
+                                if (typeValue.startsWith(typeKey)) {
                                     $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
-                            // if (typeValue.startsWith(typeKey)) {
+                                } else {}
                             } else {
                                 $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
                             }
