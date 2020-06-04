@@ -17,7 +17,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.18
+*     @version 3.1
 */
 
 try {
@@ -25,7 +25,7 @@ try {
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
   var externalArticleLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Article Link' output='normal' display_field='value' />");
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Summary' output='normal' display_field='value' />");
-  var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
+  // var summary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var articleTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
   var publisher = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publication' output='normal' display_field='value' />");
   var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
@@ -40,7 +40,8 @@ try {
   if (publicationDate != '') {
     var arrayOfDateTime = publicationDate.split(' ');
     var dateArr = '';
-    for (let i = 0; i < 4; i++) {
+    /* begin parsing array at one to remove leading day of week, begin at zero to include day of week */
+    for (let i = 1; i < 4; i++) {
       dateOnly += arrayOfDateTime[i] + ' ';
     }
   }
@@ -67,7 +68,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
   document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" title="' + publisher + ': ' + articleTitle + '" target="_blank" >' + articleTitle + '</a></h4></div>');
-  document.write('<div class="summary">' + articleSummary + ': ' + summary + '</div>');
+  document.write('<div class="summary">' + articleSummary + '</div>');
   document.write(listOfTags);
   document.write('<div class="publisher">' + publisher + '</div>');
   document.write('<div class="author">' + author + '</div>');
