@@ -20,12 +20,8 @@
     text-decoration: none;
 }
 
-div.author {
-    font-style: italic;
-}
-
 div.publisher {
-    font-weight: 600;
+    font-style: italic;
 }
 
 figure.programImageWrapper {
