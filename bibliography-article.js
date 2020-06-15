@@ -63,12 +63,17 @@ try {
   var endingHTML = '</div></div>';
 
 
-
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="summaryWrapper">');
   document.write('<div class="titleAnchor"><h4><a href="' + externalArticleLink + '" title="' + publisher + ': ' + articleTitle + '" target="_blank" >' + articleTitle + '</a></h4></div>');
-  document.write('<div class="summary">' + articleSummary + '</div>');
+  
+  if (articleSummary != "") {
+    document.write('<div class="summary">' + articleSummary + '</div>');
+  } else {
+    document.write('<div class="summary" style="display: none">No Summary Entered</div>');
+  }
+  
   document.write(listOfTags);
   document.write('<div class="publisher">' + publisher + '</div>');
   document.write('<div class="author">' + author + '</div>');
