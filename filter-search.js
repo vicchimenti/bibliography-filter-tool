@@ -2,9 +2,6 @@
 /***
 *   @author Victor Chimenti, MSCS-SE 2020
 *   @file filter-search.js
-*   @see UCOR, UNIVERSITY CORE CURRICULUM, https://www.seattleu.edu/core/for-students/courses/
-*   as an example of this filter engine
-*   This URI will change after launch to to suit the host department
 *
 *   jQuery
 *   This script searches the Bibliography content items for matches to the
