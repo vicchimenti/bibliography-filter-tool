@@ -19,13 +19,12 @@
 
 
 $(function () {
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
     // After the DOM is ready, Wait until the window loads
-    $(window).load(function () {
-        // Once window loads set a timeout delay
-        setTimeout(function () {
-            $(window).on('beforeunload', function () {
-                $(window).scrollTop(0);
-            
+        $(window).load(function () {
+            // Once window loads set a timeout delay
+                
 
 
 
@@ -107,8 +106,8 @@ $(function () {
 
 
 
-            });
-        }, 10);
+            }, 10);
+        });
     });
 });
 </script>
