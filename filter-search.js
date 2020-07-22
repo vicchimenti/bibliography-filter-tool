@@ -24,7 +24,6 @@ $(function () {
 
 
 
-
             //** global array holds list of content items that will render after filter selection **//
             var visibleItems = [];
             var parseItems = {};
