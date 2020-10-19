@@ -1,6 +1,6 @@
 <script type="text/javascript">
 /***
-*   @author Victor Chimenti, MSCS-SE 2020
+*   @author Victor Chimenti, MSCS-SE '20
 *   @file filter-search.js
 *
 *   jQuery
