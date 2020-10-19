@@ -2,6 +2,8 @@
 /***
 *   @author Victor Chimenti, MSCS-SE '20
 *   @file filter-search.js
+*   @see The Seattle University Initiative in Ethics and Transformative Technologies
+*       https://www.seattleu.edu/ethics-and-technology/educational-resources/annotated-bibliography/
 *
 *   jQuery
 *   This script searches the Bibliography content items for matches to the
