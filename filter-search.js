@@ -6,10 +6,10 @@
 *       https://www.seattleu.edu/ethics-and-technology/educational-resources/annotated-bibliography/
 *
 *   jQuery
-*   This script searches the bibliography content items for matches to the
+*   This script searches the Bibliography content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 1.0
+*   @version 1.3
 */
 
 
@@ -73,33 +73,35 @@ $(function () {
 
 
 
-						
 
             //   ***   Type Filter   ***   //
             $(function () {
-                // When the Dropdown Menu Selector Course Types Change - Execute change function
                 $('#SelectBox-ByType').change(function () {
-                    // Assign Search Key
                     let typeKey = $(this).val();
-                    // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('.articleType').filter(function (i, e) {
-                            var typeValue = $(this).text();
-                            // Check to see if the Key and Value are a Match
+                        $('ul.tags').each(function (i,e) {
+                            let typeValue = $(this).text();
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                                $(this)
+                                    .parents('.knowledgeBaseItemWrapper')
+                                    .removeClass('hideByType');
                             } else {
-                                $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
+                                $(this)
+                                    .parents('.knowledgeBaseItemWrapper')
+                                    .addClass('hideByType');
                             }
                         });
-                        // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                        $('.knowledgeBaseItemWrapper')
+                            .removeClass('hideByType');
                     }
-                    // parse out unselected content items and limit display to user selected items
                     parseItems.process();
                 });
             });
+
+
+
+
         }, 10);
     });
 });
