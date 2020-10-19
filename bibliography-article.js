@@ -2,12 +2,7 @@
 *     @author Victor Chimenti, MSCS 2020
 *     @file article-content-type.js
 *
-*     This new content type is being adapted from the knowledge base
-*     content type used by IT Services and is intended to provide a
-*     searchable, sortable group of articles that can be exported to and used
-*     by any department.
-*
-*     This specific project is intended for the Ethics and Transformative
+*     This project is intended for the Ethics and Transformative
 *     Technologies initiative, although this content type should easily be
 *     exportable to other teams.
 *
